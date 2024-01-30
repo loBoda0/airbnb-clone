@@ -5,6 +5,7 @@ import GithubProvider from "next-auth/providers/github"
 import GoogleProvider from "next-auth/providers/google"
 import { PrismaAdapter } from "@next-auth/prisma-adapter"
 import prisma from '@/app/libs/prismadb'
+import { User } from '@prisma/client'
 
 export const authOptions: AuthOptions = {
   adapter: PrismaAdapter(prisma),
@@ -59,6 +60,25 @@ export const authOptions: AuthOptions = {
     strategy: "jwt",
   },
   secret: process.env.NEXTAUTH_SECRET,
+  /* callbacks: {
+    async signIn(user, account, profile) {
+      // Save user to the database using Prisma
+      console.log('sign in callback')
+      console.log(user)
+      const {user: userData} = user 
+      console.log('sign in callback')
+      await prisma.user.upsert({
+        where: { email: userData.email },
+        update: {},
+        create: {
+          email: userData.email,
+          name: userData.name,
+          // Add any other user information you want to store
+        },
+      });
+      return true;
+    },
+  }, */
 }
 
 const handler =  NextAuth(authOptions)
