@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server"
 
 import getCurrentUser from "@/actions/getCurrentUser"
-import prisma from "@/app/libs/prismadb"
+import prisma from "@/libs/prismadb"
 
 interface IListingsParams {
   listingId?: string
