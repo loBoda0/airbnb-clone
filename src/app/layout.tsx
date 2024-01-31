@@ -7,6 +7,7 @@ import RegisterModal from "@/components/modals/RegisterModal";
 import LoginModal from "@/components/modals/LoginModal";
 import RentModal from "@/components/modals/RentModal";
 import getCurrentUser from "@/actions/getCurrentUser";
+import SearchModal from "@/components/modals/SearchModal";
 
 export const metadata: Metadata = {
   title: "Airbnb",
@@ -27,6 +28,7 @@ export default async function RootLayout({
       <body className={nunito.className}>
         <ToasterProvider />
         <RegisterModal />
+        <SearchModal />
         <LoginModal />
         <RentModal />
         <Navbar currentUser={currentUser} />
