@@ -9,6 +9,7 @@ import useLoginModal from '@/hooks/useLoginModal'
 import { User } from '@prisma/client'
 import { signOut } from 'next-auth/react'
 import useRentModal from '@/hooks/useRentModal'
+import { useRouter } from 'next/navigation'
 
 interface UserMenuProps {
   currentUser?: User | null
@@ -19,6 +20,7 @@ const UserMenu: React.FC<UserMenuProps> = ({currentUser}) => {
   const registerModal = useRegisterModal()
   const loginModal = useLoginModal()
   const rentModal = useRentModal()
+  const router = useRouter()
 
   const toggleOpen = useCallback(() => {
     setIsOpen((value) => !value)
@@ -50,12 +52,26 @@ const UserMenu: React.FC<UserMenuProps> = ({currentUser}) => {
           <div className="flex flex-col cursor-pointer">
             {currentUser ? (
               <>
-                <MenuItem onClick={() => {}} label='My trips' />
-                <MenuItem onClick={() => {}} label='My facourites' />
-                <MenuItem onClick={() => {}} label='My facovites' />
-                <MenuItem onClick={() => {}} label='My reservations' />
-                <MenuItem onClick={() => {}} label='My properties' />
-                <MenuItem onClick={rentModal.onOpen} label='Airbnb my home' />
+                <MenuItem 
+                  label="My trips" 
+                  onClick={() => router.push('/trips')}
+                />
+                <MenuItem 
+                  label="My favorites" 
+                  onClick={() => router.push('/favorites')}
+                />
+                <MenuItem 
+                  label="My reservations" 
+                  onClick={() => router.push('/reservations')}
+                />
+                <MenuItem 
+                  label="My properties" 
+                  onClick={() => router.push('/properties')}
+                />
+                <MenuItem 
+                  label="Airbnb your home" 
+                  onClick={rentModal.onOpen}
+                />
                 <hr />
                 <MenuItem onClick={signOut} label='Logout' />
               </>
