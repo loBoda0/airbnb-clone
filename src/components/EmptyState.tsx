@@ -1,14 +1,14 @@
-'use client';
+'use client'
 
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation"
 
-import Button from "./Button";
-import Heading from "./Heading";
+import Button from "./Button"
+import Heading from "./Heading"
 
 interface EmptyStateProps {
-  title?: string;
-  subtitle?: string;
-  showReset?: boolean;
+  title?: string
+  subtitle?: string
+  showReset?: boolean
 }
 
 const EmptyState: React.FC<EmptyStateProps> = ({
@@ -16,7 +16,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({
   subtitle = "Try changing or removing some of your filters.",
   showReset
 }) => {
-  const router = useRouter();
+  const router = useRouter()
 
   return ( 
     <div 
@@ -44,7 +44,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({
         )}
       </div>
     </div>
-   );
+   )
 }
  
-export default EmptyState;
+export default EmptyState

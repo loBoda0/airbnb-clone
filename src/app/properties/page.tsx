@@ -3,15 +3,15 @@ import React from 'react'
 
 
 import getCurrentUser from "@/actions/getCurrentUser"
-import getListings from '@/actions/getListings';
-import PropertiesClient from './PropertiesClient';
+import getListings from '@/actions/getListings'
+import PropertiesClient from './PropertiesClient'
 
 interface IParams {
   listingId?: string
 }
 
 const page = async ({params}: {params: IParams}) => {
-  const currentUser = await getCurrentUser();
+  const currentUser = await getCurrentUser()
 
   if (!currentUser) {
     return (

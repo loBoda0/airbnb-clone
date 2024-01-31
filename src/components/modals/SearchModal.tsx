@@ -2,7 +2,7 @@
 
 import React, { useCallback, useMemo, useState } from 'react'
 import Modal from './Modal'
-import useSearchModal from '@/hooks/useSearchModal copy'
+import useSearchModal from '@/hooks/useSearchModal'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { Range } from 'react-date-range'
 import dynamic from 'next/dynamic'

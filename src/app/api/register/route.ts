@@ -20,7 +20,7 @@ export async function POST(
     })
     return NextResponse.json(user)
   } catch (error) {
-    console.error(error);  // Log the original error for debugging purposes
+    console.error(error) // Log the original error for debugging purposes
     return new Response("Error", { status: 400 }) 
   }
 }

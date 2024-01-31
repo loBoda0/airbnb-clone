@@ -3,15 +3,15 @@ import React from 'react'
 
 
 import getCurrentUser from "@/actions/getCurrentUser"
-import getReservations from "@/actions/getReservations";
-import TripsClient from './TripsClient';
+import getReservations from "@/actions/getReservations"
+import TripsClient from './TripsClient'
 
 interface IParams {
   listingId?: string
 }
 
 const page = async ({params}: {params: IParams}) => {
-  const currentUser = await getCurrentUser();
+  const currentUser = await getCurrentUser()
 
   if (!currentUser) {
     return (

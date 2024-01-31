@@ -1,7 +1,7 @@
-import Heading from "@/components/Heading";
-import Container from "@/components/Container";
-import ListingCard from "@/components/listings/ListingCard";
-import { Listing, User } from "@prisma/client";
+import Heading from "@/components/Heading"
+import Container from "@/components/Container"
+import ListingCard from "@/components/listings/ListingCard"
+import { Listing, User } from "@prisma/client"
 
 interface FavoritesClientProps {
   listings: Listing[],
@@ -40,7 +40,7 @@ const FavoritesClient: React.FC<FavoritesClientProps> = ({
         ))}
       </div>
     </Container>
-   );
+   )
 }
  
-export default FavoritesClient;
+export default FavoritesClient

@@ -10,12 +10,12 @@ import Image from 'next/image'
 import HeartButton from '../HeartButton'
 
 interface ListingCardProps {
-  data: Listing;
-  reservation?: Reservation;
-  onAction?: (id: string) => void;
-  disabled?: boolean;
-  actionLabel?: string;
-  actionId?: string;
+  data: Listing
+  reservation?: Reservation
+  onAction?: (id: string) => void
+  disabled?: boolean
+  actionLabel?: string
+  actionId?: string
   currentUser?: User | null
 }
 

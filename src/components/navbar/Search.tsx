@@ -1,7 +1,7 @@
 'use client'
 
 import useCountries from '@/hooks/useCountries'
-import useSearchModal from '@/hooks/useSearchModal copy'
+import useSearchModal from '@/hooks/useSearchModal'
 import { differenceInCalendarDays } from 'date-fns'
 import { useSearchParams } from 'next/navigation'
 import React, { useContext, useMemo } from 'react'

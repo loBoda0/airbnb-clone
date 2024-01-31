@@ -179,7 +179,7 @@ const Modal: React.FC<ModalProps> = ({
         </div>
       </div>
     </>
-  );
+  )
 }
 
 export default Modal

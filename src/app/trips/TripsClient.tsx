@@ -11,8 +11,8 @@ import toast from 'react-hot-toast'
 
 interface TripsClientProps {
   reservations: (Reservation & {
-    listing: Listing;
-  })[];
+    listing: Listing
+  })[]
   currentUser: User
 }
 

@@ -1,19 +1,19 @@
-'use client';
+'use client'
 
 import { 
   FieldErrors, 
   FieldValues, 
   UseFormRegister 
-} from "react-hook-form";
-import { BiDollar } from "react-icons/bi";
+} from "react-hook-form"
+import { BiDollar } from "react-icons/bi"
 
 interface InputProps {
-  id: string;
-  label: string;
-  type?: string;
-  disabled?: boolean;
-  formatPrice?: boolean;
-  required?: boolean;
+  id: string
+  label: string
+  type?: string
+  disabled?: boolean
+  formatPrice?: boolean
+  required?: boolean
   register: UseFormRegister<FieldValues>,
   errors: FieldErrors
 }
@@ -86,7 +86,7 @@ const Input: React.FC<InputProps> = ({
         {label}
       </label>
     </div>
-   );
+   )
 }
  
-export default Input;
+export default Input
